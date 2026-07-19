@@ -21,7 +21,7 @@ export const Login: React.FC = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/login', {
+      const response = await axios.post(axios.post('https://ai-placement-preparation-system-2.onrender.com/api/auth/login', ...), {
         username,
         password
       });
