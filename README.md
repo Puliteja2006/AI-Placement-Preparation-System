@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AI Placement Preparation System 🚀
 ### *Enterprise-Grade, AI-Powered Career Readiness Platform (Java Spring Boot + React TS)*
 
@@ -12,12 +11,11 @@ The platform assists students in maximizing career placement parameters via:
 5. **Floating AI Chatbot**: Real-time advice coach answering DSA, interview behavior, and resume syntax questions.
 6. **Placement Admin Console**: Roster tracking panels, global KPIs, and drill-down inspections of student profiles.
 
----
 
 ## 1. Complete Folder Structure & File-by-File Explanation
 
 ### Folder Directory Map
-```text
+
 MINI PROJECT.AI PLACEMENTPREPARATION SYSTEM/
 ├── backend/                              # Java Spring Boot Core API
 │   ├── pom.xml                           # Maven project configuration
@@ -78,7 +76,6 @@ MINI PROJECT.AI PLACEMENTPREPARATION SYSTEM/
 │           ├── CareerRoadmap.tsx         # Daily milestones & probability slider
 │           └── AdminDashboard.tsx        # KPI metrics & drill-down modals
 └── README.md                             # Major Project Documentation
-```
 
 ### File-by-File Technical Purpose
 - **`pom.xml`**: Manages all required dependencies: Spring Web, stateless Spring Security 6, Spring Data JPA, H2 Database engine (for rapid zero-config local runs), PostgreSQL native drivers, io.jsonwebtoken library for securing transactions, and Lombok to minimize boilerplate.
@@ -87,15 +84,14 @@ MINI PROJECT.AI PLACEMENTPREPARATION SYSTEM/
 - **`AIService.java`**: Evaluates resumes using regex word checks, compiles transcripts, predicts placement probability using weighted multidimensional formulas, and routes chatbot advice streams.
 - **`CodingAssessmentService.java`**: Simulates compilation, validating arrays search solutions and string algorithms, counting efficiency indices, and logging status scores.
 
----
 
 ## 2. API Architecture (REST Endpoints Specification)
 
 All API endpoints are structured RESTfully, returning standardized JSON responses:
 
 ### 1. Authentication (Public Scope)
-- `POST /api/auth/register` : Creates student or admin profiles, hashes passwords, and sets defaults.
-- `POST /api/auth/login` : Performs standard Spring Security checks, signs HS512 tokens, and returns full profile parameters.
+POST /api/auth/register : Creates student or admin profiles, hashes passwords, and sets defaults.
+POST /api/auth/login : Performs standard Spring Security checks, signs HS512 tokens, and returns full profile parameters.
 
 ### 2. Candidate Features (Stateless Bearer JWT Authorized)
 - `GET /api/student/profile` : Fetches active profile statistics.
@@ -116,11 +112,9 @@ All API endpoints are structured RESTfully, returning standardized JSON response
 - `GET /api/admin/students` : Returns complete student parameters list.
 - `GET /api/admin/students/{id}/detail` : Drill-down student profile inspections.
 
----
 
 ## 3. Database ER Diagram & Relational Schemas
 
-```text
   +-------------------+
   |       USERS       | <---------+ (1-to-Many Notification alerts)
   +-------------------+           |
@@ -148,7 +142,6 @@ All API endpoints are structured RESTfully, returning standardized JSON response
          |   - PK  id          |
          |   - FK  user_id     |
          +---------------------+
-```
 
 ### Relational Database Mappings
 1. **`users` -> `resumes` (1-to-Many)**: A candidate can parse multiple resumes over time. `resumes.user_id` acts as a Foreign Key referencing `users.id` with cascade deletion.
@@ -157,7 +150,6 @@ All API endpoints are structured RESTfully, returning standardized JSON response
 4. **`users` -> `skill_analyses` (1-to-1)**: A student possesses one master pathfinder record, holding their active skills list, gaps, placement probabilities, and 6-week daily plans.
 5. **`users` -> `notifications` (1-to-Many)**: Broadcasts in-app alerts.
 
----
 
 ## 4. Setup, Deployment & Local Execution Guide
 
@@ -168,13 +160,12 @@ To run this enterprise application on your local machine instantly, follow these
 - **Node.js (v18 or higher)** and **NPM** installed.
 - **Apache Maven** installed (or utilize the Maven wrapper if available).
 
----
 
 ### Step 1: Running the Java Spring Boot Backend
 1. Open a terminal and navigate to the `backend/` directory:
    ```bash
    cd backend
-   ```
+  
 2. Build the Maven project, downloading dependencies and running compiling:
    ```bash
    mvn clean install
@@ -190,7 +181,6 @@ To run this enterprise application on your local machine instantly, follow these
    - Password: `password`
    - Click "Connect" to instantly view database schemas!
 
----
 
 ### Step 2: Running the React Frontend Client
 1. Open a new terminal window and navigate to the `frontend/` directory:
@@ -215,7 +205,8 @@ For academic review, this project adheres to modern **AI in EdTech** design phil
 - **Heuristic-AI Simulation**: Real-time mock evaluations use natural language pattern classifiers inside the Spring Boot container. This minimizes costly external network dependencies and latency issues while keeping the platform accessible in standard local environments.
 - **Gamified readiness telemetry**: Integrating academic marks (CGPA), resume parsing statistics, DSA coding submission accuracy, and HR mock metrics motivates student improvement. The placement probability slider adds visual educational reinforcement, letting students dynamically simulate how improving individual metrics improves their corporate probability parameters!
 - **Stateless security design**: State remains decentralized in client-side localStorage, letting Spring Boot APIs run stateless, highly scalable, and extremely fast.
-=======
+
+
 # 🚀 AI Placement Preparation System
 
 ### Intelligent Career Development and Placement Readiness Platform:
@@ -486,5 +477,3 @@ If you find this project useful, consider giving it a star.
 # 📌 Summary:
 
 The AI Placement Preparation System is a unified career development platform that integrates resume management, coding assessment, interview preparation, project evaluation, career planning, and performance analytics to support students in achieving placement readiness through a structured and intelligent preparation process.
-
->>>>>>> c856e3407d76b3a280e37eee543a4f0119a9f873
