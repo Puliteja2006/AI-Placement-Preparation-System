@@ -28,7 +28,7 @@ export const Register: React.FC = () => {
     setSuccess('');
 
     try {
-      await axios.post('http://localhost:8080/api/auth/register', {
+      await axios.post('axios.post('https://ai-placement-preparation-system-2.onrender.com/api/auth/login..., {
         username,
         email,
         password,
