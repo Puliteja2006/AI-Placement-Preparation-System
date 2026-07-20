@@ -56,7 +56,7 @@ export const Chatbot: React.FC = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/student/chatbot/ask',
+        "https://ai-placement-preparation-system-2.onrender.com/api/student/chatbot/ask",
         { prompt: textToSend },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
