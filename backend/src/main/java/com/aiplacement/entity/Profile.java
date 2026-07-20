@@ -46,4 +46,16 @@ public class Profile {
 
     @Column(length = 1000)
     private String aboutMe;
+    public String getFullName() {
+    return fullName;
 }
+
+public String getEmail() {
+    return email;
+}
+
+public String getPhoneNumber() {
+    return phoneNumber;
+}
+}
+
