@@ -1,4 +1,5 @@
 const PROD_FALLBACK = 'https://ai-placement-preparation-system-2.onrender.com';
+
 const fromEnv = (import.meta as any).env?.VITE_API_URL as string | undefined;
 
 export const API_BASE: string = (
